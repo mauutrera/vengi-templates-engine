@@ -1,0 +1,19 @@
+{
+    "name": "vengi/vengi",
+    "description": "A simple Template Engine for PHP.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vengi\\": "src/"
+        },
+        "files": [
+            "src/Layout.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mauricio Utrera Molina"
+        }
+    ]
+}
