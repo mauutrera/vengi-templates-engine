@@ -72,3 +72,20 @@ Example:
     <h1>Sum of two numbers.</h1>
     5+5 = {= 5+5 }}
     {{ Layout::set('main-2.layout')->footer() }}
+    
+## Pass Information to Views.
+
+You can pass information to views through an associative array, on the view side you can access the information through a variable with the name of the key related to the corresponding value in the passed associative array.
+
+    View::set('home',['key'=>$data]);
+
+Example:
+
+    View::set('home',['key'=>$data,'number'=>2022]);
+
+In the View 'home':
+
+    <h1>Home View</h1>
+    Data: {= $key }}
+    <br>
+    Year: {= $number }}
