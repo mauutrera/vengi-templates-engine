@@ -73,7 +73,7 @@ Example:
     5+5 = {= 5+5 }}
     {{ Layout::set('main-2.layout')->footer() }}
     
-## Pass Information to Views.
+### Pass Information to Views.
 
 You can pass information to views through an associative array, on the view side you can access the information through a variable with the name of the key related to the corresponding value in the passed associative array.
 
