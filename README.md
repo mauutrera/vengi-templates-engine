@@ -1,5 +1,5 @@
-# About Vengi
-Vengi is a simple Template Engine for PHP. With vengi you can create your layouts and views in a simple and practical way, vengi is designed for small projects that are looking for something light, and easy to use and understand.
+# About Vengi/Engine
+Vengi/Engine is a simple Template Engine for PHP. With vengi you can create your layouts and views in a simple and practical way, vengi is designed for small projects that are looking for something light, and easy to use and understand.
 
 ## Installation
 You can add this Library via composer.
