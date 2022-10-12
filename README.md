@@ -4,7 +4,7 @@ Vengi is a simple Template Engine for PHP. With vengi you can create your layout
 ## Installation
 You can add this Library via composer.
 
-    composer require vengi/vengi
+    composer require vengi/engine
 
 ## Usage
 Include the autoload.php:
@@ -13,13 +13,13 @@ Include the autoload.php:
 
 Add Vengi: 
 
-    use Vengi\Vengi;
+    use Vengi\Engine;
     use Vengi\View;
 
 Config work folders:
 
-    Vengi::views(__DIR__.'/views'); // Set views path.
-    Vengi::layouts(__DIR__.'/views/layouts'); // Set layouts path.
+    Engine::views(__DIR__.'/views'); // Set views path.
+    Engine::layouts(__DIR__.'/views/layouts'); // Set layouts path.
 
 Note: By default, if you don't define the layouts path, the views/layouts path will be taken.
 
