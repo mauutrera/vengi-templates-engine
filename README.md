@@ -99,7 +99,7 @@ Add at the top of the view:
 Add al in the Layout inside title tags:
 
     <head>
-        <title>{{ Layout::titles('PROVISIONAL_NAME') }}</title>
+        <title>{{ Layout::titles('PROVISIONAL_TITLE') }}</title>
     </head>
 
 

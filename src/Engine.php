@@ -2,7 +2,7 @@
 
 namespace Vengi;
 
-class Vengi
+class Engine
 {
     public static $views_path;                                          # Save the views path.
     public static $layouts_path;                                        # Save the layouts path.

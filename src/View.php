@@ -2,7 +2,7 @@
 
 namespace Vengi;
 
-use Vengi\Vengi;
+use Vengi\Engine;
 
 class View
 {
@@ -28,14 +28,14 @@ class View
     
     public static function prepare()                            # Function prepare().
     {
-        $file = Vengi::$views_path.'/'.self::$view.'.php';      # Define the path of the view in use.
+        $file = Engine::$views_path.'/'.self::$view.'.php';     # Define the path of the view in use.
         $fopen = fopen($file, "r");                             # Open the view file.
         $view = fread($fopen, filesize($file));                 # Save the content of the view to $view.
         fclose($fopen);                                         # Close the file.
 
-        $view = Vengi::render($view);                           # Render the view content and save in $view.
+        $view = Engine::render($view);                          # Render the view content and save in $view.
 
-        Vengi::render_path(__DIR__.'/views');                   # Sets the route of the rendered views, if the route does not exist, it creates it.
+        Engine::render_path(__DIR__.'/views');                  # Sets the route of the rendered views, if the route does not exist, it creates it.
 
         $compiled_view = __DIR__.'/views/view.php';             # Save the path of the compiled/rendered view.
         $fopen = fopen($compiled_view, "w");                    # Opens the file where the rendered content of the current view is saved.
