@@ -94,7 +94,7 @@ class Layout
         if (empty(self::$title)) {                                  # If not exists a custom title.
             echo $optional;                                         # Echo the PROVISIONAL TITLE if exists.
         } else {                                                    # else.
-            echo self::$title;                                      # Echo the custom self::$title.
+            echo self::$title;                                      # Echo the custom self::$title..
         }
     }
 }
