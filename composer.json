@@ -15,5 +15,8 @@
         {
             "name": "Mauricio Utrera Molina"
         }
-    ]
+    ],
+    "require": {
+        "vengi/basic-functions-pack": ">=0.1.0"
+    }
 }
