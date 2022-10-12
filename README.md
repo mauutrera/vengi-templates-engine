@@ -89,3 +89,29 @@ In the View 'home':
     Data: {= $key }}
     <br>
     Year: {= $number }}
+
+### Define a Custom Title on the View.
+
+Add at the top of the view:
+
+    {{ Layout::title('MyTitle') }}
+
+Add al in the Layout inside title tags:
+
+    <head>
+        <title>{{ Layout::titles('PROVISIONAL_NAME') }}</title>
+    </head>
+
+
+### Define a Custom HEAD Tags (META,JS,CSS) on the View.
+
+Add at the top of the view:
+
+    {{ Layout::head('<link rel="stylesheet" type="text/css" href="#">') }}
+
+Add al in the Layout inside title tags:
+
+    <head>
+        <title>Home</title>
+        {{ Layout::headCustom() }}
+    </head>
