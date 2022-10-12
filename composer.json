@@ -1,5 +1,5 @@
 {
-    "name": "vengi/vengi",
+    "name": "vengi/engine",
     "description": "A simple Template Engine for PHP.",
     "type": "library",
     "license": "MIT",

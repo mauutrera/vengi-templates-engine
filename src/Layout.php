@@ -5,6 +5,8 @@ use Vengi\Vengi;
 class Layout
 {
     public static $layout;                                          # Save the current layout.
+    public static $head = [];                                       # Save the custom head items.
+    public static $title;                                           # Save the custom title page.
 
     public static function set($layout)                             # Function set(get the name of the layout).
     {
@@ -62,5 +64,37 @@ class Layout
     public function item()                                          # Function header().
     {
         return require_once(__DIR__.'/views/layouts/'.self::$layout.'.php');    # Return a require_once header.php component/item.
+    }
+
+    public static function head($head)
+    {
+        if (sizeof(self::$head)>=1) {
+            self::$head[0] = $head;
+        } else {
+            self::$head[sizeof(self::$head)+1] = $head;
+        }
+    }
+
+    public static function headCustom()
+    {
+        if (sizeof(self::$head)>=1) {
+            foreach (self::$head as $head) {
+                echo $head;
+            }
+        }
+    }
+
+    public static function title($title)
+    {
+        self::$title = $title;
+    }
+
+    public static function titles($optional)
+    {
+        if (empty(self::$title)) {
+            echo $optional;
+        } else {
+            echo self::$title;
+        }
     }
 }
